@@ -1,0 +1,41 @@
+# Normalize line endings by default (recommended)
+* text=auto
+
+# Explicit line endings for scripts
+*.sh    text eol=lf
+*.bash  text eol=lf
+*.py    text eol=lf
+*.rb    text eol=lf
+
+*.bat   text eol=crlf
+*.cmd   text eol=crlf
+*.ps1   text eol=crlf
+
+# Docs and plain text
+*.md    text
+*.txt   text
+
+# Mark common binaries to avoid CRLF/text conversion and diffs
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.pdf   binary
+*.zip   binary
+*.tar   binary
+*.gz    binary
+*.7z    binary
+*.exe   binary
+*.dll   binary
+*.so    binary
+*.ttf   binary
+*.otf   binary
+
+# Treat build/output dirs as binary (no text merges/diffs)
+dist/**    binary
+build/**   binary
+node_modules/** binary
+
+# Do not include this file in generated archives
+.gitattributes export-ignore
